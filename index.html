@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuel AA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #181818; /* Fondo oscuro */
+            color: #fff;
+            line-height: 1.6;
+            transition: background-color 0.3s ease;
+            padding-top: 80px; /* Espacio para que el header no tape el contenido */
+        }
+
+        header {
+            background-color: #222222; /* Fondo más oscuro para el header */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* Sombra mas intensa */
+            position: fixed; /* Fija el header en la parte superior */
+            top: 0; /* Posición en la parte superior de la página */
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Asegura que el header quede por encima de otros elementos */
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #FF5733; /* Naranja fuerte */
+            transition: color 0.3s ease;
+        }
+
+        /* Estilo para el menu */
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+        }
+
+        .menu {
+            background-color: #333333;
+            border-radius: 5px;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .menu a {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #FF5733;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            color: #fff;
+            font-size: 30px;
+            display: block;
+        }
+
+        .menu-icon:hover {
+            color: #FF5733;
+        }
+
+        .bio {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #333333; /* Fondo oscuro para biografia */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+            margin-top: 80px; /* Este margin-top asegura que la biografía no se solape con el header fijo */
+        }
+
+        .bio h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            color: #FF5733; /* Naranja fuerte */
+            transition: color 0.3s ease;
+        }
+
+        .bio p {
+            font-size: 18px;
+            color: #f1f1f1; /* Blanco calido para contraste fuerte */
+            line-height: 1.8;
+        }
+
+        .music-section {
+            margin: 40px auto;
+            text-align: center;
+            max-width: 800px;
+            transition: transform 0.3s ease;
+        }
+
+        .album-cover {
+            width: 100%; /* La imagen ocupará todo el ancho disponible */
+            max-width: 350px; /* Limita el ancho máximo de la imagen */
+            height: 350px; /* Altura fija para mantener la proporción */
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin: 20px auto; /* Centra la imagen horizontalmente */
+            display: block; /* Asegura que la imagen se trate como un bloque */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
+        }
+
+        .album-cover:hover {
+            transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8); /* Sombra más intensa al pasar el mouse */
+        }
+
+        .music-link {
+            display: inline-block;
+            margin-top: 20px; /* Espacio entre la imagen y el botón */
+            padding: 14px 30px;
+            background-color: #FF5733; /* Naranja fuerte */
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .music-link:hover {
+            background-color: #C70039; /* Rojo mas oscuro */
+            transform: translateY(-5px); /* Efecto de desplazamiento */
+        }
+
+        footer {
+            background-color: #222222; /* Fondo mas oscuro para el footer */
+            padding: 20px;
+            text-align: center;
+            color: #f1f1f1; /* Blanco cálido */
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            .bio h2 {
+                font-size: 24px;
+            }
+
+            .bio p {
+                font-size: 16px;
+            }
+
+            .album-cover {
+                max-width: 300px;
+                height: 300px;
+            }
+
+            .music-link {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Anuel AA</h1>
+        <nav>
+            <span class="menu-icon">☰</span>
+            <div class="menu">
+                <a href="https://www.instagram.com/anuel/">Instagram</a>
+                <a href="https://x.com/anuel_2blea">Twitter</a>
+                <a href="https://www.facebook.com/Anuel2bleAofficial/?locale=es_ES">Facebook</a>
+                <a href="https://www.youtube.com/@AnuelAA/videos">YouTube</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bio">
+        <h2>Biografía</h2>
+        <p>Anuel AA, cuyo nombre real es Emmanuel Gazmey Santiago, es un cantante y rapero puertorriqueño conocido por su estilo de reggaetón y trap. Conocido por sus letras explícitas y su relación con el mundo del crimen, ha alcanzado gran popularidad a lo largo de los años. Su música ha influido en toda una generación, consolidándose como uno de los artistas más importantes del género urbano.</p>
+        <img src="imagenes/anuel1.jpg" alt="Anuel AA" style="width:100%; max-width: 500px; border-radius: 10px; margin-top: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);">
+    </section>
+
+    <section class="music-section">
+        <h2>Escucha su último álbum</h2>
+        <!-- Imagen centrada -->
+        <img src="imagenes/llnm2.jpg" alt="Portada del álbum" class="album-cover">
+        <!-- Boton debajo de la portada -->
+        <a href="https://open.spotify.com/intl-es/artist/2R21vXR83lH98kGeO99Y66" class="music-link">Escuchar en Spotify</a>
+    </section>
+
+    <footer>
+        <p>2025 de Anuel AA | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
